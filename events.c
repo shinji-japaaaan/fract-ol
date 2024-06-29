@@ -40,3 +40,28 @@ int close_window(t_data *data)
     (void)data;
     exit(0);
 }
+
+int handle_focus_in(int keycode, t_data *data)
+{
+    (void)keycode;
+    data->is_active = 1;
+    draw_fractal(data);
+    return (0);
+}
+
+
+int handle_focus_out(int keycode, t_data *data)
+{
+    (void)keycode;
+    data->is_active = 0;
+    return (0);
+}
+
+int expose_hook(t_data *data)
+{
+    if (data->is_active) {
+        draw_fractal(data);
+        mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img_ptr, 0, 0);
+    }
+    return (0);
+}

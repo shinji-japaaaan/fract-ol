@@ -23,6 +23,7 @@
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
 
+// 構造体の定義
 typedef struct s_data {
     void    *mlx_ptr;
     void    *win_ptr;
@@ -38,6 +39,7 @@ typedef struct s_data {
     int     fractal_type; // フラクタルの種類: 0 = Mandelbrot, 1 = Julia
     double  c_re; // ジュリア集合の実数部分
     double  c_im; // ジュリア集合の虚数部分
+    int     is_active; // ウィンドウがアクティブかどうか
 } t_data;
 
 // プロトタイプ宣言
@@ -47,5 +49,8 @@ void    draw_julia(t_data *data, double c_re, double c_im);
 int     handle_key(int keycode, t_data *data);
 int     handle_mouse(int button, int x, int y, t_data *data);
 int     close_window(t_data *data);
+int     handle_focus_in(int keycode, t_data *data);
+int     handle_focus_out(int keycode, t_data *data);
+int     expose_hook(t_data *data);
 
 #endif
