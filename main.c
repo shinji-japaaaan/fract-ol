@@ -30,17 +30,22 @@ int main(int argc, char **argv)
     data.y_offset = 0.0;
     data.max_iter = 50;
 
-    if (ft_strncmp(argv[1], "mandelbrot", 10) == 0)
-        draw_mandelbrot(&data);
-    else if (ft_strncmp(argv[1], "julia", 5) == 0)
-        draw_julia(&data, -0.7, 0.27015); // ジュリア集合のパラメータは変更可能
+    if (ft_strncmp(argv[1], "mandelbrot", 10) == 0) {
+        data.fractal_type = 0;
+    } else if (ft_strncmp(argv[1], "julia", 5) == 0) {
+        data.fractal_type = 1;
+        data.c_re = -0.7;
+        data.c_im = 0.27015; // ジュリア集合のパラメータは変更可能
+    }
 
-    mlx_put_image_to_window(data.mlx_ptr, data.win_ptr, data.img_ptr, 0, 0);
+    draw_fractal(&data);
     mlx_key_hook(data.win_ptr, handle_key, &data);
     mlx_mouse_hook(data.win_ptr, handle_mouse, &data);
     mlx_hook(data.win_ptr, 17, 0, close_window, &data);
     mlx_loop(data.mlx_ptr);
     return (0);
 }
+
+
 
 
