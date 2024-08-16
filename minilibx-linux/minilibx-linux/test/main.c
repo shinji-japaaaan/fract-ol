@@ -29,17 +29,17 @@ int	endian1;
 int	endian2;
 int	endian3;
 int	endian4;
-char	*data1;
-char	*data2;
-char	*data3;
-char	*data4;
+char	*d1;
+char	*d2;
+char	*d3;
+char	*d4;
 int	xpm1_x;
 int	xpm1_y;
 
 int	local_endian;
 
 int	color_map_1(void *win,int w,int h);
-int	color_map_2(unsigned char *data,int bpp,int sl,int w,int h,int endian, int type);
+int	color_map_2(unsigned char *d,int bpp,int sl,int w,int h,int endian, int type);
 
 int	expose_win1(void *p)
 {
@@ -240,7 +240,7 @@ int	color_map_1(void *win,int w,int h)
 }
 
 
-int	color_map_2(unsigned char *data,int bpp,int sl,int w,int h,int endian, int type)
+int	color_map_2(unsigned char *d,int bpp,int sl,int w,int h,int endian, int type)
 {
   int	x;
   int	y;

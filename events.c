@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   event.c                                            :+:      :+:    :+:   */
+/*   events.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sishizaw <sishizaw@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: sishizaw <sishizaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/29 09:46:27 by sishizaw              #+#    #+#             */
-/*   Updated: 2024/06/29 09:46:27 by sishizaw             ###   ########.fr       */
+/*   Created: 2024/08/15 07:26:24 by sishizaw          #+#    #+#             */
+/*   Updated: 2024/08/16 18:27:06 by sishizaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-int handle_key(int keycode, t_data *data)
+int handle_key(int keycode, t_data *d)
 {
-    (void)data;
+    (void)d;
     if (keycode == 65307) // ESCキー
         exit(0);
     return (0);
 }
 
-int handle_mouse(int button, int x, int y, t_data *data)
+int handle_mouse(int button, int x, int y, t_data *d)
 {
     (void)x;
     (void)y;
-    (void)data;
+    (void)d;
     if (button == 4) // マウスホイール上
-        data->zoom *= 1.1;
+        d->zoom *= 1.1;
     else if (button == 5) // マウスホイール下
-        data->zoom /= 1.1;
+        d->zoom /= 1.1;
 
-    draw_fractal(data);
-    mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, data->img_ptr, 0, 0);
+    draw_fractal(d);
     return (0);
 }
 
-int close_window(t_data *data)
+int close_window(t_data *d)
 {
-    (void)data;
+    (void)d;
     exit(0);
 }

@@ -6,7 +6,7 @@
 /*   By: sishizaw <sishizaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 11:35:28 by sishizaw          #+#    #+#             */
-/*   Updated: 2024/05/01 16:54:08 by sishizaw         ###   ########.fr       */
+/*   Updated: 2024/08/16 18:23:28 by sishizaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,13 +56,13 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // int	main()
 // {
 // 	t_list	*lst = NULL;
-// 	int	*data1 = (int *)malloc(sizeof(int));
-// 	int	*data2 = (int *)malloc(sizeof(int));
-// 	int	*data3 = (int *)malloc(sizeof(int));
+// 	int	*d1 = (int *)malloc(sizeof(int));
+// 	int	*d2 = (int *)malloc(sizeof(int));
+// 	int	*d3 = (int *)malloc(sizeof(int));
 
-// 	*data1 = 1;
-// 	*data2 = 2;
-// 	*data3 = 3;
+// 	*d1 = 1;
+// 	*d2 = 2;
+// 	*d3 = 3;
 // 	ft_lstadd_back(&lst, ft_lstnew(data1));
 // 	ft_lstadd_back(&lst, ft_lstnew(data2));
 // 	ft_lstadd_back(&lst, ft_lstnew(data3));

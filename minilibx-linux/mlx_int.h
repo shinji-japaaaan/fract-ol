@@ -63,7 +63,7 @@ typedef struct	s_event_list
 {
 	int		mask;
 	int		(*hook)();
-	void	*param;
+	void	*pm;
 }				t_event_list;
 
 
@@ -75,9 +75,9 @@ typedef struct	s_win_list
 	int					(*mouse_hook)();
 	int					(*key_hook)();
 	int					(*expose_hook)();
-	void				*mouse_param;
-	void				*key_param;
-	void				*expose_param;
+	void				*mouse_pm;
+	void				*key_pm;
+	void				*expose_pm;
 	t_event_list		hooks[MLX_MAX_EVENT];
 }				t_win_list;
 
@@ -93,7 +93,7 @@ typedef struct	s_img
 	int				height;
 	int				type;
 	int				format;
-	char			*data;
+	char			*d;
 	XShmSegmentInfo	shm;
 }				t_img;
 
@@ -108,7 +108,7 @@ typedef struct	s_xvar
 	int			private_cmap;
 	t_win_list	*win_list;
 	int			(*loop_hook)();
-	void		*loop_param;
+	void		*loop_pm;
 	int			use_xshm;
 	int			pshm_format;
 	int			do_flush;

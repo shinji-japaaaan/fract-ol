@@ -6,7 +6,7 @@
 /*   By: sishizaw <sishizaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 11:20:46 by sishizaw          #+#    #+#             */
-/*   Updated: 2024/05/01 17:08:18 by sishizaw         ###   ########.fr       */
+/*   Updated: 2024/08/16 18:23:28 by sishizaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 // int	main()
 // {
 // 	t_list *node = (t_list *)malloc(sizeof(t_list));
-// 	int	*data = (int *)malloc(sizeof(int));
+// 	int	*d = (int *)malloc(sizeof(int));
 // 	if (!node || !data)
 // 		return (0);
-// 	*data = 42;
+// 	*d = 42;
 // 	node->content = data;
 // 	node->next = NULL;
 // 	ft_lstdelone(node, &del);
