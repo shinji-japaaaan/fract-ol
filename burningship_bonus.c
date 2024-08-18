@@ -6,15 +6,15 @@
 /*   By: sishizaw <sishizaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 08:18:40 by sishizaw          #+#    #+#             */
-/*   Updated: 2024/08/17 08:04:55 by sishizaw         ###   ########.fr       */
+/*   Updated: 2024/08/18 18:07:07 by sishizaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol_bonus.h"
 
-static int iter_burning(t_burn *p, int max_iter)
+static int	iter_burning(t_burn *p, int max_iter)
 {
-	int i;
+	int	i;
 
 	p->new_r = 0;
 	p->new_i = 0;
@@ -25,21 +25,21 @@ static int iter_burning(t_burn *p, int max_iter)
 	{
 		p->old_r = p->new_r;
 		p->old_i = p->new_i;
-        p->new_r = fabs(p->old_r * p->old_r - p->old_i * p->old_i + p->pr);
-	    p->new_i = fabs(2 * p->old_r * p->old_i + p->pi);
+		p->new_r = fabs(p->old_r * p->old_r - p->old_i * p->old_i + p->pr);
+		p->new_i = fabs(2 * p->old_r * p->old_i + p->pi);
 		if ((p->new_r * p->new_r + p->new_i * p->new_i) > 4)
-			break;
+			break ;
 		i++;
 	}
 	return (i);
 }
 
-void draw_burningship(t_data *d)
+void	draw_burningship(t_data *d)
 {
-	int					x;
-	int					y;
-	int					i;
-    int             color;
+	int		x;
+	int		y;
+	int		i;
+	int		color;
 	t_burn	p;
 
 	y = 0;
@@ -52,7 +52,7 @@ void draw_burningship(t_data *d)
 			p.pi = (y - HEIGHT / 2) / (0.5 * d->zoom * HEIGHT) + d->y_mo;
 			i = iter_burning(&p, d->max_iter);
 			color = get_color(i, d->max_iter, d->shift);
-	        d->img_data[y * d->size_line + x * d->bpp / 8] = color;
+			d->img_data[y * d->size_line + x * d->bpp / 8] = color;
 			x++;
 		}
 		y++;
