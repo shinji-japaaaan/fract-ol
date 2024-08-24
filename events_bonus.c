@@ -6,7 +6,7 @@
 /*   By: sishizaw <sishizaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 07:26:15 by sishizaw          #+#    #+#             */
-/*   Updated: 2024/08/18 18:07:31 by sishizaw         ###   ########.fr       */
+/*   Updated: 2024/08/24 10:21:23 by sishizaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,17 @@ void	update_shift(t_data *d)
 
 int	handle_key(int keycode, t_data *d)
 {
-	if (keycode == 65307)
+	if (keycode == 53)
 		exit(0);
-	else if (keycode == 65361)
+	else if (keycode == 123)
 		d->x_mo -= 0.1 / d->zoom;
-	else if (keycode == 65363)
+	else if (keycode == 124)
 		d->x_mo += 0.1 / d->zoom;
-	else if (keycode == 65362)
+	else if (keycode == 126)
 		d->y_mo -= 0.1 / d->zoom;
-	else if (keycode == 65364)
+	else if (keycode == 125)
 		d->y_mo += 0.1 / d->zoom;
-	else if (keycode == 99)
+	else if (keycode == 8)
 		update_shift(d);
 	draw_fractal(d);
 	return (0);

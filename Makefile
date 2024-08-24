@@ -6,7 +6,7 @@
 #    By: sishizaw <sishizaw@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/14 15:44:49 by sishizaw          #+#    #+#              #
-#    Updated: 2024/08/18 19:22:13 by sishizaw         ###   ########.fr        #
+#    Updated: 2024/08/24 09:47:35 by sishizaw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = fractol
 NAME_BONUS = fractol_bonus
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-MLX = -L minilibx-linux -lmlx -lXext -lX11 -lm
+MLX = -L minilibx-linux -lmlx -framework OpenGL -framework AppKit
 LIBFT = ./libft/libft.a
 
 SRC = main.c events.c mandelbrot.c julia.c

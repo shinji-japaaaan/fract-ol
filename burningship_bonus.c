@@ -6,7 +6,7 @@
 /*   By: sishizaw <sishizaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 08:18:40 by sishizaw          #+#    #+#             */
-/*   Updated: 2024/08/18 18:07:07 by sishizaw         ###   ########.fr       */
+/*   Updated: 2024/08/24 09:49:05 by sishizaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	draw_burningship(t_data *d)
 			p.pi = (y - HEIGHT / 2) / (0.5 * d->zoom * HEIGHT) + d->y_mo;
 			i = iter_burning(&p, d->max_iter);
 			color = get_color(i, d->max_iter, d->shift);
-			d->img_data[y * d->size_line + x * d->bpp / 8] = color;
+			d->img_data[y * d->line + x * d->bpp / 8] = color;
 			x++;
 		}
 		y++;

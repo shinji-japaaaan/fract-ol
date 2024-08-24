@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: sishizaw <sishizaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 11:39:54 by sishizaw          #+#    #+#             */
-/*   Updated: 2024/06/25 18:18:11 by root             ###   ########.fr       */
+/*   Updated: 2024/08/24 10:02:41 by sishizaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	all_free(char **result, int index)
+static void	all_free(char **result, int index)
 {
 	while (0 <= index)
 	{

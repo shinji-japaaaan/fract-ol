@@ -6,7 +6,7 @@
 /*   By: sishizaw <sishizaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 15:06:21 by sishizaw          #+#    #+#             */
-/*   Updated: 2024/05/08 11:24:44 by sishizaw         ###   ########.fr       */
+/*   Updated: 2024/08/24 10:01:48 by sishizaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,20 @@ int	ft_isalnum(int c)
 		|| ('A' <= c && c <= 'Z'));
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int	main(void)
-{
-	char	c;
+// int	main(void)
+// {
+// 	char	c;
 
-	c = 0;
-	if (ft_isalnum(c))
-	{
-		printf("%c is an alphanumeric character.\n", c);
-	}
-	else
-	{
-		printf("%c is not an alphanumeric character.\n", c);
-	}
-	return (0);
-}
+// 	c = 0;
+// 	if (ft_isalnum(c))
+// 	{
+// 		printf("%c is an alphanumeric character.\n", c);
+// 	}
+// 	else
+// 	{
+// 		printf("%c is not an alphanumeric character.\n", c);
+// 	}
+// 	return (0);
+// }

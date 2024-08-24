@@ -6,13 +6,13 @@
 /*   By: sishizaw <sishizaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 10:12:46 by sishizaw          #+#    #+#             */
-/*   Updated: 2024/05/06 13:51:14 by sishizaw         ###   ########.fr       */
+/*   Updated: 2024/08/24 10:01:21 by sishizaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_long_max(int sign)
+static int	ft_long_max(int sign)
 {
 	if (sign > 0)
 		return ((int)LONG_MAX);

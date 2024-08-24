@@ -6,7 +6,7 @@
 /*   By: sishizaw <sishizaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 07:26:24 by sishizaw          #+#    #+#             */
-/*   Updated: 2024/08/18 18:07:24 by sishizaw         ###   ########.fr       */
+/*   Updated: 2024/08/24 10:17:20 by sishizaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	handle_key(int keycode, t_data *d)
 {
 	(void)d;
-	if (keycode == 65307)
+	if (keycode == 53)
 		exit(0);
 	return (0);
 }
